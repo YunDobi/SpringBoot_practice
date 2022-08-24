@@ -24,9 +24,10 @@ public class StudentService {
     }
 
     public void addNewStudent(Student student) {
-        Optional<Student> studentOptional = StudentRepository.findStudentByEmail(student.getEmail());
+        Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+
         if (studentOptional.isPresent()) {
-            throw new IllegalStateException("email taken");
+            throw new IllegalStateException("email Taken");
         }
         studentRepository.save(student);
     }
