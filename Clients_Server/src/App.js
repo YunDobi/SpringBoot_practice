@@ -1,16 +1,13 @@
-import axios from 'axios';
-import './App.css';
-
-const URL = "http://localhost:8080/api/v1/student";
-
-const data = axios.get(URL).then((data) => {
-  return data.data
-})
+import React from "react";
+import BasicTable from "./BasicTable";
+import { Header } from "./components/Header";
 
 function App() {
+  
   return (
     <div className="App">
-      
+      <Header />
+      <BasicTable />
     </div>
   );
 }
