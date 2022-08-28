@@ -2,6 +2,7 @@ import React from "react";
 import {Switch, Route, Link, Routes} from "react-router-dom";
 import StudentList from "./components/StudentsList";
 import NewStudent from "./components/NewStudent";
+import Student from "./components/Student";
 
 function App() {
   
@@ -28,6 +29,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={StudentList()} />
           <Route path={"/new"} element={NewStudent()} />
+          <Route path="/:id" component={Student()} />
         </Routes>
       </div>
     </div>
