@@ -1,8 +1,8 @@
 import React from "react";
-import {Switch, Route, Link, Routes} from "react-router-dom";
+import {Switch, Route, Link, Routes, Navigate} from "react-router-dom";
 import StudentList from "./components/StudentsList";
 import NewStudent from "./components/NewStudent";
-import Student from "./components/Student";
+import Student from "./components/Student"
 
 function App() {
   
@@ -25,11 +25,11 @@ function App() {
           </li>
         </div>
       </nav>
-      <div className="container mt-2">
+      <div className="container mt-3">
         <Routes>
-          <Route path={"/"} element={StudentList()} />
-          <Route path={"/new"} element={NewStudent()} />
-          <Route path="/:id" component={Student()} />
+          <Route path={"/"} element={<StudentList />} />
+          <Route path={"/new"} element={<NewStudent />} />
+          <Route path={"/:id"} element={<Student />} />
         </Routes>
       </div>
     </div>
