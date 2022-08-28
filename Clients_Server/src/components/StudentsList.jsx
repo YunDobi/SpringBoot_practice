@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useTable } from 'react-table';
-import 'react-table-6/react-table.css';
-import { Columns } from './Columns';
 
 export default function BasicTable() {
   const data = axios.get('http://localhost:8080/api/v1/student')
