@@ -1,5 +1,5 @@
 import React from "react";
-import BasicTable from "./BasicTable";
+import BasicTable from "./components/BasicTable";
 import { Header } from "./components/Header";
 
 function App() {

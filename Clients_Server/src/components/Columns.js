@@ -14,7 +14,7 @@ export const Columns = [
   },
   {
     Header: "Date & Birth",
-    accessor: "id"
+    accessor: "dob"
   },
   {
     Header: "AGE",
