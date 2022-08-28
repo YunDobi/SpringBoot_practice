@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import StudentService from "../services/StudentService";
+import { useParams } from "react-router-dom";
 
 
-const UpdateStudent = (id) => {
+const UpdateStudent = () => {
+  let {id} = useParams()
+  console.log(id)
   const initStudent = {
     id: id,
     name: "",

@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import StudentService from "../services/StudentService";
 import {useTable} from "react-table";
-import { useNavigate, Route, useHistory } from 'react-router-dom';
-import UpdateStudent from "./Student";
+import {useNavigate, Navigate, Link} from 'react-router-dom';
+import { render } from "@testing-library/react";
+
 
 
 const StudentList = (props) => {
   const [students, setStudents] = useState([]);
+  let navigate = useNavigate();
   const studentsRef = useRef();
   studentsRef.current = students;
 
@@ -26,11 +28,11 @@ const StudentList = (props) => {
 
   
 
-  const editStudent = (rowIndex) => {
-
+  const EditStudent = (rowIndex) => {
+    
     const id = studentsRef.current[rowIndex].id;
-    props.history.push("/:id");
-
+    console.log(id)
+    navigate("/"+id);
   };
 
 
@@ -77,9 +79,9 @@ const StudentList = (props) => {
           const rowIdx = props.row.id;
           return (
             <div>
-              {/* <span onClick={() => Component()} style={{margin:"0 10px"}}>
+              <span style={{margin:"0 10px"}} onClick={() => {EditStudent(rowIdx)}}>
                 <i className="far fa-edit action mr-2"></i>
-              </span> */}
+              </span>
               <span onClick={() => deleteStudent(rowIdx)} style={{margin:"0 10px"}}>
                 <i className="fas fa-trash action"></i>
               </span>
