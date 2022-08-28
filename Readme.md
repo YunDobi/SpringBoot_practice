@@ -1,5 +1,6 @@
 # Description
-this is the Practice of the using Spring Boot, also it is CRUD student API website with JAVA.
+This is the CRUD school student managment system with Spring Boot. This is the frist exercise of using Spring Boot with Java, so in the future, will be putting more feature.
+I used the React and Bootstrap for frontend and backend with JAVA with Spring Boot.
 
 ## getting start
     run DemoApplication and go to localhost:8080/api/vi/student
