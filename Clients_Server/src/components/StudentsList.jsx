@@ -122,7 +122,7 @@ const StudentList = (props) => {
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody {...getTableBodyProps()} className="table-container">
             {rows.map((row, i) => {
               prepareRow(row);
               return (
